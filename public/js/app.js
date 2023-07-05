@@ -7,7 +7,7 @@ const msg2 = document.querySelector('#msg-2')
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const address = search.value
-    const url = './weather?address='+ encodeURIComponent(address)
+    const url = '/weather?address='+ encodeURIComponent(address)
 
     msg1.textContent = 'Loading...'
     msg2.textContent = ''
