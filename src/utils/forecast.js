@@ -11,6 +11,7 @@ const forecast = (lat, lon, callback) => {
             callback('Unable to find location', undefined)
         } else {
             const data = body.weather[0].main + '. It is currently ' + body.main.temp + ' degrees. But feels like ' + body.main.feels_like + ' degrees.'
+                        + ' Minimun temperature for the day is ' + body.main.temp_min + ' degrees. Maximum temperature for the day is ' + body.main.temp_max + ' degrees.'
             callback(undefined, data)
         }
     })
